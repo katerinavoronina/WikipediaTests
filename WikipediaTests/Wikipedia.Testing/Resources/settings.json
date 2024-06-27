@@ -1,0 +1,81 @@
+{
+  "browserName": "chrome",
+  "isRemote": false,
+  "remoteConnectionUrl": "http://qa-auto-nexus:4444/wd/hub",
+  "isElementHighlightEnabled": true,
+
+  "driverSettings": {
+    "chrome": {
+      "capabilities": {
+        "selenoid:options": {
+          "enableVNC": true
+        },
+        "unhandledPromptBehavior": "ignore"
+      },
+      "options": {
+        "intl.accept_languages": "en",
+        "safebrowsing.enabled": "true",
+        "profile.default_content_settings.popups": "0",
+        "disable-popup-blocking": "true",
+        "download.prompt_for_download": "false",
+        "download.default_directory": "./downloads"
+      },
+      "loggingPreferences": {
+        "Performance": "All"
+      },
+      "excludedArguments": [ "enable-automation" ],
+      "startArguments": [
+        "window-size=1920,1080",
+        "--headless",
+        "--lang=en"
+      ],
+      "pageLoadStrategy": "Normal"
+    },
+    "edge": {
+      "capabilities": {
+        "enableVNC": true,
+        "unhandledPromptBehavior": "ignore"
+      },
+      "options": {
+        "intl.accept_languages": "en",
+        "safebrowsing.enabled": "true",
+        "profile.default_content_settings.popups": "0",
+        "disable-popup-blocking": "true",
+        "download.prompt_for_download": "false",
+        "download.default_directory": "./downloads"
+      },
+      "excludedArguments": [ "enable-automation" ],
+      "startArguments": []
+    },
+    "safari": {
+      "options": {
+        "safari.options.dataDir": "/Users/username/Downloads"
+      }
+    }
+  },
+  "timeouts": {
+    "timeoutImplicit": 0,
+    "timeoutCondition": 30,
+    "timeoutScript": 10,
+    "timeoutPageLoad": 60,
+    "timeoutPollingInterval": 300,
+    "timeoutCommand": 60
+  },
+  "retry": {
+    "number": 2,
+    "pollingInterval": 300
+  },
+  "logger": {
+    "language": "en",
+    "logPageSource": true
+  },
+  "elementCache": {
+    "isEnabled": false
+  },
+  "visualization": {
+    "defaultThreshold": 0.012,
+    "comparisonWidth": 16,
+    "comparisonHeight": 16,
+    "pathToDumps": "../../../Resources/VisualDumps/"
+  }
+}
